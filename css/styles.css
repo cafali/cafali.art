@@ -22,8 +22,6 @@ body {
     background-repeat: no-repeat;
     opacity: 100;
     animation: zoom 20s infinite alternate ease-in-out;
-    z-index: 1;
-    
 }
 
 @keyframes zoom {
@@ -183,7 +181,7 @@ body {
     font-size: clamp(10px, 2vw, 18px);
     color: white;
     text-decoration: none;
-    z-index: 2;
+    z-index: 5;
 }
 
 .home:hover {
