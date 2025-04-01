@@ -203,7 +203,7 @@ opacity: 0.5;
     color: #fff;
     font-size: clamp(60px, 5vw, 600px);
     font-family: 'Pacifico', cursive;
-    z-index: 0;
+    z-index: 1;
     text-decoration: none;
     transform-origin: center;
     animation: pulse 1s ease-out;
