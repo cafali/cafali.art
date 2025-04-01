@@ -233,7 +233,7 @@ opacity: 0.5;
     left: 5%;
     top: 50%;
     transform: translateY(-50%);
-    font-size: clamp(1px, 1vw, 20px);
+    font-size: clamp(10px, 1.15vw, 20px); 
     color: #ffffff;
     max-width: min(600px, 90%);
     line-height: 1.5;
