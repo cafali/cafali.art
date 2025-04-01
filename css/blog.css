@@ -1,0 +1,117 @@
+:root {
+    --text-color: #ffffff;
+    --bg-color: linear-gradient(to left, #000000, #000000);
+    --hover-bg-color: #9191916b;
+    --post-text-color: #ccc;
+    --fade-in: linear-gradient(to left, #000000, #000000);
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-color);
+    background-image: url('../assets/background.png');
+    filter: brightness(0.7);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 100;
+    animation: zoom 40s infinite alternate ease-in-out;
+    z-index: -1;
+}
+
+@keyframes zoom {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.5);
+    }
+}
+
+body {
+    background: var(--fade-in);
+    color: var(--text-color);
+    text-shadow: 0 0 5px var(--text-shadow-color);
+    font-family: 'Trebuchet MS', sans-serif;
+    margin: 0;
+    padding: 350px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    line-height: 1.5;
+    opacity: 0;
+    animation: fadeIn 1s ease-in forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+header {
+    font-family: 'Pacifico', cursive;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+.post {
+    border: 0px solid var(--border-color);
+    border-radius: 20px;
+    padding: 30px;
+    margin-bottom: 30px;
+    background-color: var(--bg-color);
+    text-shadow: none;
+    word-wrap: break-word;
+    max-height: 700px;
+    overflow-y: auto;
+    box-shadow: none;
+    backdrop-filter: blur(5px); 
+    -webkit-backdrop-filter: blur(10px);
+    font-size: clamp(5px, 1vw, 20px); 
+}
+
+.post:hover {
+    background-color: var(--hover-bg-color);
+    transition: background-color 0.5s ease;
+    transform: translateY(5px);
+    scale: 1.04;
+    border-color: #191919;
+}
+
+.post h2 {
+    color: var(--text-color);
+    font-size: 2em;
+    margin-top: 0;
+}
+
+.post p {
+    color: var(--post-text-color);
+    margin: 10px 0;
+}
+
+.home {
+    position: fixed;
+    bottom: 10px;
+    left: 13px;
+    font-size: clamp(10px, 2vw, 18px);
+    color: white;
+    text-decoration: none;
+    z-index: 2;
+}
+
+.home:hover {
+scale: 0.95;
+opacity: 0.5;
+}
