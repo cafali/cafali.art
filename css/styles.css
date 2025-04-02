@@ -211,10 +211,21 @@ opacity: 0.5;
 .no-decoration {
     text-decoration: none;
     color: inherit;
+    color: #ffffff;
 }
 .no-decoration:hover {
     text-decoration: none;
-    color: #fad000;
+    color: #efefefd3;
+}
+
+.contact-info {
+    text-decoration: none;
+    color: inherit;
+    color: #fffffff8;
+}
+.contact-info:hover {
+    text-decoration: none;
+    color:#efefefd3;
 }
 
 
