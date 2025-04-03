@@ -36,10 +36,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const categories = document.querySelectorAll(".category");
     const maintitle = document.querySelector(".maintitle");
     let resetTimeout;
+    let currentMaintitle = maintitle.textContent;
 
     function changeTitleSmoothly(newText) {
-        maintitle.style.opacity = "0"; 
-
+        maintitle.style.opacity = "0";
         setTimeout(() => {
             maintitle.textContent = newText;
             maintitle.style.opacity = "1";
@@ -49,24 +49,24 @@ document.addEventListener("DOMContentLoaded", function () {
     function resetToDefault() {
         maintitle.style.opacity = "0";
         setTimeout(() => {
-            maintitle.textContent = "cafali";
-            maintitle.style.opacity = "0.1"; 
+            maintitle.textContent = currentMaintitle;
+            maintitle.style.opacity = "0.1";
             maintitle.style.animation = "none";
-            void maintitle.offsetWidth; 
+            void maintitle.offsetWidth;
             maintitle.style.animation = "slide-in 1s ease forwards";
         }, 300);
     }
 
     categories.forEach(category => {
         category.addEventListener("mouseover", function () {
-            clearTimeout(resetTimeout); 
+            clearTimeout(resetTimeout);
             changeTitleSmoothly(this.dataset.title.toLowerCase());
         });
 
         category.addEventListener("mouseout", function () {
             resetTimeout = setTimeout(() => {
                 resetToDefault();
-            }, 1000); // delay reset
+            }, 1000);
         });
     });
 });
