@@ -1,5 +1,4 @@
 // clock
-
 function updateClock() {
     const now = new Date();
     const hours = String(now.getHours()).padStart(2, '0');
@@ -31,7 +30,6 @@ setTimeout(() => {
 }, 1);
 
 // change maintitle on hover (category)
-
 document.addEventListener("DOMContentLoaded", function () {
     const categories = document.querySelectorAll(".category");
     const maintitle = document.querySelector(".maintitle");
@@ -43,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
         setTimeout(() => {
             maintitle.textContent = newText;
             maintitle.style.opacity = "1";
-        }, 300);
+        }, 250);
     }
 
     function resetToDefault() {
@@ -66,7 +64,7 @@ document.addEventListener("DOMContentLoaded", function () {
         category.addEventListener("mouseout", function () {
             resetTimeout = setTimeout(() => {
                 resetToDefault();
-            }, 1000);
+            }, 2000);
         });
     });
 });
