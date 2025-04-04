@@ -111,8 +111,7 @@ body {
 }
 
 .category:hover {
-    transform: scale(1.05);
-    color: #b9b9b9;    
+    transform: scale(1.05); 
 }
 
 .category:active {
