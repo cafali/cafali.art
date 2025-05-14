@@ -136,3 +136,22 @@ h1 {
         font-size: clamp(12px, 3vw, 18px);
     }
 }
+
+.year-selector {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.year-link {
+    text-decoration: none;
+    color: inherit;
+    margin: 0 10px;
+}
+
+.year-link.active {
+    text-decoration: underline;
+    color: rgba(255, 255, 255, 0.568);
+    font-weight: bold;
+}
