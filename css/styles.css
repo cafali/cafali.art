@@ -67,7 +67,7 @@ body {
     height: 100vh;
     color: #ffffff;
     font-size: clamp(50px, 10vw, 120px);
-    font-family: 'Velocity', cursive;
+    font-family: 'Pacifico', cursive;
     text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.394);
     z-index: 2;
     text-align: center;
