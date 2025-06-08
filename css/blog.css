@@ -1,7 +1,7 @@
 :root {
     --text-color: #ffffff;
     --bg-color: linear-gradient(to left, #000000, #000000);
-    --hover-bg-color: rgba(145, 145, 145, 0.42);
+    --hover-bg-color: rgba(9, 9, 9, 0.42);
     --post-text-color: #ccc;
     --fade-in: linear-gradient(to left, #000000, #000000);
 }
