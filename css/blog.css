@@ -2,6 +2,7 @@
     --text-color: #ffffff;
     --bg-color: linear-gradient(to left, #000000, #000000);
     --hover-bg-color: rgba(9, 9, 9, 0.42);
+    --hover-post-color: rgb(67 0 115 / 26%);
     --post-text-color: #ccc;
     --fade-in: linear-gradient(to left, #000000, #000000);
 }
@@ -42,7 +43,7 @@ html, body {
     background-image:
     linear-gradient(to bottom right, #3300854e, #8000ff50),
     url('../assets/background.webp');
-    filter: brightness(0.6);
+    filter: brightness(1);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -94,7 +95,7 @@ h1 {
 }
 
 .post:hover {
-    background-color: var(--hover-bg-color);
+    background-color: var(--hover-post-color);
     transform: translateY(-5px) scale(1.02);
 }
 
