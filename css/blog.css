@@ -2,7 +2,7 @@
     --text-color: #ffffff;
     --bg-color: linear-gradient(to left, #000000, #000000);
     --hover-bg-color: rgba(9, 9, 9, 0.42);
-    --hover-post-color: rgb(67 0 115 / 26%);
+    --hover-post-color: rgb(32 0 55 / 64%);
     --post-text-color: #ccc;
     --fade-in: linear-gradient(to left, #000000, #000000);
 }
@@ -47,7 +47,7 @@ html, body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    opacity: 0.8;
+    opacity: 1;
     animation: zoom 40s infinite alternate ease-in-out;
     z-index: -1;
 }
