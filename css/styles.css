@@ -73,11 +73,11 @@ body {
     text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.394);
     z-index: 2;
     text-align: center;
-    user-select: none;
     left: 20vw;
     margin-left: -30vw;
+    user-select: none;
     opacity: 0;
-    transform: translate(calc(20vw), -30%)
+    transform: translateY(-30%); /* start pos*/
     animation: slide-in 1.0s ease forwards;
 }
 
