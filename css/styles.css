@@ -74,8 +74,10 @@ body {
     z-index: 2;
     text-align: center;
     user-select: none;
+    left: 20vw;
+    margin-left: -30vw;
     opacity: 0;
-    transform: translateY(-30%); /* start pos*/
+    transform: translate(calc(20vw), -30%)
     animation: slide-in 1.0s ease forwards;
 }
 
