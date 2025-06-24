@@ -74,7 +74,7 @@ body {
     z-index: 2;
     text-align: center;
     left: 20vw;
-    margin-left: -30vw;
+    margin-left: -23%;
     user-select: none;
     opacity: 0;
     transform: translateY(-30%); /* start pos*/
