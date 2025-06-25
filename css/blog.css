@@ -3,7 +3,7 @@
     --bg-color: linear-gradient(to left, #000000, #000000);
     --hover-bg-color: rgba(9, 9, 9, 0.42);
     --hover-post-color: rgb(32 0 55 / 64%);
-    --post-text-color: #ccc;
+    --post-text-color: #f0f0f0;
     --fade-in: linear-gradient(to left, #000000, #000000);
 }
 
