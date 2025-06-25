@@ -116,13 +116,12 @@ body {
 
 .category:hover {
     transform: scale(1);
-    color: #c0c0c0;  
+    color: #ffffff45;  
 }
 
 .category:active {
-    transform: scale(1.12);
-    opacity: 0.8;
-    color: #ffffff;    
+    transform: scale(0.9);
+    color: #ffffff45;  
 }
 
 .category:nth-child(2) {
