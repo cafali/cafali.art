@@ -180,7 +180,7 @@ body {
 
 .home:hover {
 scale: 0.95;
-opacity: 0.5;
+color: #db8bff8a; 
 }
 
 .mail {
@@ -219,7 +219,7 @@ opacity: 0.5;
 }
 .no-decoration:hover {
     text-decoration: none;
-    color: #efefefd3;
+    color: #db8bff8a; ;
 }
 
 .contact-info {
@@ -229,9 +229,8 @@ opacity: 0.5;
 }
 .contact-info:hover {
     text-decoration: none;
-    color:#efefefd3;
+    color: #db8bff8a; ;
 }
-
 
 .text-container {
     position: absolute;
