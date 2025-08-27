@@ -225,11 +225,11 @@ color: #db8bff8a;
 .contact-info {
     text-decoration: none;
     color: inherit;
-    color: #fffffff8;
+    color: #ffffff;;
 }
 .contact-info:hover {
     text-decoration: none;
-    color: #db8bff8a; ;
+    color: #ffd2fe; ;
 }
 
 .text-container {
