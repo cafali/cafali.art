@@ -1,49 +1,250 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>cafali - ResTweak</title>
-
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/styles.css">
-    <link rel="icon" href="../assets/icon.png">
-
-    <meta property="og:title" content="cafali.art - ResTweak">
-    <meta property="og:description" content="cafali.art – ResTweak">
-    <meta property="og:image" content="https://cafali.art/assets/icon.png">
-    <meta property="og:url" content="https://cafali.art">
-    <meta property="og:type" content="website">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ResTweak - Download</title>
 </head>
-
 <body>
-    <div class="background" aria-hidden="true"></div>
-    <div class="maintitle">ResTweak</div>
-    <div class="black-box" aria-hidden="true"></div>
+  <header>
+     <h1>cafali.art | Project Browser</h1>
+    <nav>
+      <a href="SnapKey.html">SnapKey</a>
+      <a href="PathScan.html">PathScan</a>
+      <a href="CherryPad.html">CherryPad</a>
+      <a href="SkinDealz.html">SkinDealz</a>
+      <a href="ResTweak.html">ResTweak</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>ResTweak</h2>
+    <p>Your Sleek, Distraction-Free Browser Notepad</p>
+    <a href="#features" class="btn">Learn More</a>
+    <a href="#download" class="btn btn-yellow">Get ResTweak</a>
+  </section>
+
+  <section class="features" id="features">
+    <h2>ResTweak features</h2>
+    <div class="feature-grid">
+      <div class="feature">
+        <h3>💾</h3>
+        <p>AutoSave</p>
+      </div>
+      <div class="feature">
+        <h3>🖥️</h3>
+        <p>Create notes using the extension popup or access the full-screen mode for a larger workspace</p>      
+      </div>
+      <div class="feature">
+        <h3>🌒</h3>
+        <p>Comfortable design for long-term viewing</p>      
+      </div>
+    </div>
+  </section>
+  
+  <section class="features" id="features">
+    <h2>What is ResTweak?</h2>
+    <p>ResTweak is a browser extension aimed at simplifying deal-hunting in various gaming markets, particularly on the LIVE market.<br>By holding the SHIFT key while adding items to your CART, ResTweak automates the purchasing process, reducing the time to under 2900ms for the entire procedure.</p>
+    <div class="feature-grid">
+  </section>
+
+  <section class="cta" id="download">
+    <h2>Download ResTweak</h2>
+    <p>Download the latest version of ResTweak below!</p>
+    <a href="https://chromewebstore.google.com/detail/cherrypad-notepad-extensi/fhneekooapbagkckacdlemielahijgfd" class="btn">Get ResTweak Now</a>
+    <a href="https://github.com/cafali/CherryPad" class="btn btn-yellow" target="_blank" rel="noopener">View on GitHub</a>
+  </section>
+
+  <footer>
+  cafali.art | cafalidev@gmail.com
+  </footer>
 </body>
 </html>
-<div class="black-box" aria-hidden="true"></div>
-<div class="text-container">
-    <p style="font-size: 50px; opacity: 1;">ResTweak</p>
-<p>I created this to quickly switch to 4:3</p>
-<p>when playing CS. This allows me to play</p>
-<p>4:3 in fullscreen windowed mode, where</p>
-<p>I don't need to worry about the long</p>
-<p>alt+tabbing issue that occurs in fullscreen</p>
-<p>mode and often bugs out when playing 4:3.</p>
-<br>
-<p>It automatically toggles between the resolutions</p>
-<p>depending on your current setting.</p>
-<br>
-<p>🖥️ <b>GITHUB</b> – <a href="https://github.com/cafali/ResolutionTweak/releases" target="_blank" class="no-decoration">DOWNLOAD</a></p>
-<p>🌐 <b>About ResTweak</b> – <a href="https://github.com/cafali/ResolutionTweak" target="_blank" class="no-decoration">VIEW</a></p>
-</div>
-</head>
-<random>
-    <div class="bottominfo">
-        github.com/cafali - cafalidev@gmail.com
-        <br> cafali.art</div>  
-        <a class="home" href="../projects">R E T U R N</a>   
-</random>
 
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: #000;
+    color: #eee;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.7);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding: 12px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+  }
+
+  header h1 {
+    font-size: 1.2em;
+    font-weight: 700;
+    color: #38bdf8;
+  }
+
+  header nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #eee;
+    font-weight: 500;
+    transition: color 0.2s;
+  }
+
+  header nav a:hover {
+    color: #38bdf8;
+  }
+
+  section.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url('bg_restweak.png') no-repeat center center/cover;
+    text-align: center;
+    padding: 0 20px;
+  }
+
+  section.hero h2 {
+    font-size: 6em;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 20px;
+  }
+
+  section.hero p {
+    font-size: 1.5em;
+    color: #bbb;
+    max-width: 700px;
+    margin: 0 auto 40px;
+  }
+
+  .btn {
+    display: inline-block;
+    background: #38bdf8;
+    color: black;
+    padding: 14px 30px;
+    border-radius: 30px;
+    font-size: 1.1em;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    margin: 5px;
+  }
+
+  .btn:hover {
+    background: #38bdf8;
+    color: #fff;
+    transform: translateY(-2px);
+  }
+
+  .btn-yellow {
+    background: #333;
+    color: #cacaca;
+  }
+
+  .btn-yellow:hover {
+    background: #222;
+    color: #fff;
+  }
+
+  .btn-orange {
+    background: #e9f10f;
+    color: #111;
+  }
+
+  .btn-orange:hover {
+    background: #b9bf0d;
+    color: #fff;
+  }
+
+  section.features {
+    padding: 100px 20px;
+    background: #111;
+    text-align: center;
+  }
+
+  section.features h2 {
+    font-size: 2.8em;
+    font-weight: 700;
+    margin-bottom: 40px;
+    color: #fff;
+  }
+
+  .feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .feature {
+    background: #1a1a1a;
+    padding: 40px 25px;
+    border-radius: 24px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+    transition: transform 0.3s ease;
+  }
+
+  .feature:hover {
+    transform: translateY(-8px);
+  }
+
+  .feature h3 {
+    font-size: 1.4em;
+    margin-bottom: 15px;
+    color: #38bdf8; 
+  }
+
+  .feature p {
+    color: #ccc;
+  }
+
+  section.cta {
+    padding: 120px 20px;
+    text-align: center;
+    background: linear-gradient(145deg, #111, #000);
+  }
+
+  section.cta h2 {
+    font-size: 2.5em;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #fff;
+  }
+
+  section.cta p {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+    color: #bbb;
+  }
+
+  footer {
+    background: #1d1d1d;
+    padding: 30px;
+    text-align: center;
+    font-size: 0.9em;
+    font-weight: 600;
+    color: rgb(215, 215, 215);
+    border-top: 5px solid #38bdf8;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+  </style>
