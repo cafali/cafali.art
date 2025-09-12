@@ -368,3 +368,9 @@ color: #db8bff8a;
         transform: translateY(0) scale(1);
     }
 }
+
+@media (pointer: coarse) {
+  .maintitle {
+    display: none;
+  }
+}

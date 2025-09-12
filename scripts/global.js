@@ -75,3 +75,15 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 
 gtag('config', 'G-FY6V6RK3CY');
+
+
+// mobile 
+
+document.addEventListener("DOMContentLoaded", function () {
+  const isMobile = /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+  if (isMobile) {
+    document.querySelectorAll(".maintitle").forEach(el => {
+      el.style.display = "none";
+    });
+  }
+});
