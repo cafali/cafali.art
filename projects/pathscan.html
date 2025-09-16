@@ -104,40 +104,37 @@
     }
 
     /* HEADER */
-header {
-  position: fixed;
-  top: 0; width: 100%;
-  background: rgba(28, 28, 28, 0);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(255,255,255,0.08);
-  padding: 10px 40px;
-  display: flex; justify-content: space-between; align-items: center;
-  z-index: 1000;
-}
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(0,0,0,0.7);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      padding: 12px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+    }
 
-header h1 a {
-  font-size: 1.2em;
-  font-weight: 200;
-  color: #ffffff;
-  text-decoration: none;
-}
+    header h1 {
+      font-size: 1.2em;
+      font-weight: 400;
+      color: #f1c40f;
+    }
 
-header nav a {
-  margin-left: 20px;
-  text-decoration: none;
-  color: #ccc;
-  font-weight: 400;
-  transition: color 0.25s;
-}
+    header nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #eee;
+      font-weight: 100;
+      transition: color 0.2s;
+    }
 
-header nav a:hover {
-  color: #20e0bd;
-}
-
-header nav a.active {
-  color: #e84393;
-  font-weight: 600;
-}
+    header nav a:hover {
+      color: #f1c40f;
+    }
 
     section.hero {
       height: 100vh;
