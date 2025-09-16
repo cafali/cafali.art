@@ -1,48 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>cafali.art - Home</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-    <link rel="icon" href="assets/icon.png">
-    <link rel="stylesheet" href="css/styles.css">
-    
-    <script src="scripts/global.js"></script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FY6V6RK3CY"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>cafali.art - Home</title>
+  <link rel="icon" type="image/png" href="assets/icon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
 
-    <meta property="og:title" content="cafali.art - Home">
-    <meta property="og:description" content="cafali.art – My personal space for creative projects and digital experiments">
-    <meta property="og:image" content="https://cafali.art/assets/icon.png">
-    <meta property="og:url" content="https://cafali.art">
-    <meta property="og:type" content="website">
+  <meta property="og:title" content="cafali.art - CherryPad">
+  <meta property="og:description" content="cafali.art – CherryPad Browser Extension">
+  <meta property="og:image" content="https://cafali.art/assets/icon.png">
+  <meta property="og:url" content="https://cafali.art">
+  <meta property="og:type" content="website">
 </head>
+<body>
+  <header>
+    <h1><a href="https://cafali.art">cafali.art</a> | DEV</h1>
+    <nav>
+      <a href="#aboutme">About Me</a>
+      <a href="#projects">Projects</a>
+      <a href="#setup">Setup</a>
+      <a href="blog/2025">Blog</a>
+      <a href="#contact">Contact</a>
+      <a href="changelog">Changelog</a>
+      <a href="#">About</a>
+    </nav>
+  </header>
 
-<body>    
-    <div class="background" aria-hidden="true"></div>
-    <a class="category" href="projects/snapkey" data-title="Projects">P R O J E C T S</a>
-    <a class="category" href="cafali" data-title="About Me">A B O U T ‎ M E </a>
-    <a class="category" href="blog/2025" data-title="News">N E W S</a>
-    <a class="category" href="setup" data-title="Setup">S E T U P</a>
-    <a class="category" href="contact" data-title="Contact">C O N T A C T</a>
-    <a class="category" href="more" data-title="More...">More...</a>
-    <div class="maintitle">cafali.art</div>
-    <div class="black-box" aria-hidden="true"></div>
+  <section class="hero">
+    <h2>cafali.art</h2>
+    <p><a href="https://sourceforge.net/projects/snapkey"  target="_blank" style="text-decoration: none; color: rgb(171, 171, 171);">LATEST: SnapKey 1.2.9 is here!</a></h3></p>
+      <test class="features" id="aboutme"></section>
+  </section>
 
-    <random>
-        <div id="clock"></div>
-        <div class="welcome">H o m e</div>
-        <div class="bottominfo">
-            github.com/cafali - cafalidev@gmail.com
-        <br> cafali.art</div>
-    </random>
+  <section class="features">
+    <p>🚀 <b>CODING</b> – Writing code that works… eventually</p>
+    <p>🌐 <b>WEB DESIGN</b> – Making the internet less ugly</p>
+    <p>🖌️ <b>GRAPHIC DESIGN</b> – Turning pixels into art</p>
+    <p>🎯 <b>OBSESSED WITH DETAIL</b> – One misaligned pixel? I see it</p>
+    <p>✨ <b>CREATIVE MIND</b> – Turning chaos into logic</p>
+    <p>👀 <b>PROBLEM SOLVER</b> – Fixing complex world problems</p>
+    <p>📖 <b>SELF-TAUGHT</b> – Learned from mistakes (mostly mine)</p>
+    <p>🔎 <b>KNOWLEDGE HUNTER</b> – Just curiouser than others</p>
+    <p>🔧 <b>TECH</b> – I test, it breaks, I fix</p>
+    <p>🎮 <b>GAMES</b> – My way of entertainment</p>
+    <p>🎬 <b>MOVIES</b> – I always fall asleep anyway...</p>    
+        <div style="display: flex; justify-content: center; margin-top: 40px;">
+      <img 
+        src="" 
+        style="max-width: 10%; height: auto; border-radius: 20px; box-shadow: 0 6px 30px rgba(0, 0, 0, 0);"
+      >
+    </div>
+  </section>
 
-        <a href="https://sourceforge.net/projects/snapkey/" class="news" target="_blank" rel="noopener">
-        <b>Aug 8, SnapKey 1.2.9 is here!</b><br>DOWNLOAD NOW (SOURCEFORGE)
-        </a>
+  <section class="hero2" id="projects">
+    <h2>projects</h2>
+    <p>some stuff I made...</p>
+  </section>
 
+  <section class="features" id="projects">
+
+    <div class="feature-grid">
+      <div class="feature"><h3><a href="projects/snapkey" target="_blank" class="bts-green">SnapKey</a></h3><p>SnapKey provides a user-friendly Razer Snap Tap/Wooting SOCD alternative, making it accessible across all keyboards!</p></div>
+      <div class="feature"><h3><a href="projects/pathscan"  target="_blank" class="bts-green">PathScan</a></h3><p>PathScan exports information about the contents of directories and hard drives.</p></div>
+      <div class="feature"><h3><a href="projects/cherrypad"  target="_blank" class="bts-green">CherryPad</a></h3><p>CherryPad is a sleek and modern notepad extension built for effortless note-taking right inside your browser.</p></div>
+      <div class="feature"><h3><a href="projects/skindealz"  target="_blank" class="bts-green">SkinDealz</a></h3><p>SkinDealz is a browser extension aimed at simplifying deal-hunting in various gaming markets, particularly on the LIVE market.</p></div>
+      <div class="feature"><h3><a href="projects/restweak"  target="_blank" class="bts-green">ResTweak</a></h3><p>This simple tool lets you switch between two resolutions—native and custom—with a single click. It automatically toggles between the resolutions depending on your current setting.</p></div>
+      <div class="feature"><h3><a href="#"  target="_blank" class="bts-green">WebDev</a></h3><p>I also created some websites here and there :3</p></div>
+    </div>
+    <br><br>
+    
+<a href="https://github.com/cafali"  target="_blank" class="bts-green">View more on GitHub</a></h3>
+
+</section>
+
+  <section class="hero2" id="setup">
+    <h2>my setup</h2>
+  </section>
+
+  <section class="features">
+        <p><strong>CPU:</strong> AMD Ryzen 7 9800X3D</p>
+        <p><strong>CPU Cooler:</strong> DeepCool ASSASSIN IV</p>
+        <p><strong>MOBO:</strong> MSI MAG X870 Tomahawk WIFI</p>
+        <p><strong>GPU:</strong> Sapphire NITRO+ RX 9070 XT 16GB</p>
+        <p><strong>RAM:</strong> Corsair RGB VENGEANCE DDR5 64GB 6400 MT/s</p>
+        <p><strong>PSU:</strong> ASUS TUF Gaming 1000W 80 PLUS GOLD</p>
+        <p><strong>CASE:</strong> Corsair 5000D Airflow</p>
+        <br>
+        <p><strong>KEYBOARD:</strong> Turtle Beach Vulcan TKL</p>
+        <p><strong>MOUSE:</strong> Glorious Model O Pro Wireless Blue Lynx </p>
+  </section>
+
+  <section class="hero2" id="contact">
+    <h2>contact</h2>
+      <p><strong>Mail:</strong> cafalidev@gmail.com | <strong>Github:</strong> GitHub.com/cafali</p>
+  </section>
+
+  <section class="cta" id="download">
+    <h2></h2>
+  </section>
+
+  <footer>
+    <a href="https://cafali.art">cafali.art</a> | 
+    <a href="mailto:cafalidev@gmail.com">cafalidev@gmail.com</a> |
+    <a href="blog/2025">Blog & News</a> |
+    <a href="https://github.com/cafali">GitHub</a> |
+    <a href="changelog">Changelog</a>
+    </div>
+  </footer>
 </body>
 </html>
-
