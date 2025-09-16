@@ -112,6 +112,7 @@ section.hero2 {
   height: 50vh;
   display: flex; flex-direction: column;
   justify-content: center; align-items: center;
+    background:no-repeat center center/cover;
     background-image:
     linear-gradient(to bottom right, #3300854e, #8000ff50),
     url('https://images5.alphacoders.com/102/thumb-1920-1024077.jpg');
