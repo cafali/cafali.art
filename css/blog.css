@@ -42,7 +42,7 @@ html, body {
     background-color: var(--bg-color);
     background-image:
     linear-gradient(to bottom right, #3300854e, #8000ff50),
-    url('https://images5.alphacoders.com/102/thumb-1920-1024077.jpg');
+    url('../assets/background.webp');
     filter: brightness(1);
     background-size: cover;
     background-position: center;
