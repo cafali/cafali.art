@@ -32,7 +32,6 @@ document.addEventListener('DOMContentLoaded', () => {
         if (lastActiveLink && lastActiveLink !== link) {
           lastActiveLink.style.color = '';
         }
-        link.style.fontWeight = '500';
         link.style.color = '#12cfa9';
         lastActiveLink = link;
         found = true;
