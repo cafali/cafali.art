@@ -18,36 +18,46 @@
     <meta property="og:image" content="https://cafali.art/assets/icon.png">
     <meta property="og:url" content="https://cafali.art">
     <meta property="og:type" content="website">
-  <style>
-    body {
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-    }
+<style>
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
 
+  main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;
+    /* Add space for fixed header */
+    padding-top: 120px; /* adjust based on your header height */
+  }
+
+  main p {
+    max-width: 800px;
+    line-height: 1.6;
+  }
+
+  main a {
+    color: #20e0bd;
+    text-decoration: none;
+  }
+
+  main a:hover {
+    text-decoration: underline;
+  }
+
+  /* Optional: reduce top padding on larger screens */
+  @media (min-width: 768px) {
     main {
-      flex: 1;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 40px 20px;
+      padding-top: 100px;
     }
+  }
+</style>
 
-    main p {
-      max-width: 800px;
-      line-height: 1.6;
-    }
-
-    main a {
-      color: #20e0bd;
-      text-decoration: none;
-    }
-
-    main a:hover {
-      text-decoration: underline;
-    }
-  </style>
 </head>
 <body>
   <header>
