@@ -228,11 +228,14 @@ section.features h2 {
   opacity: 0;
   transform: translateY(40px);
   animation: fadeUp 0.8s ease forwards;
+  transition: scale 0.3s ease, background 0.3s ease;
+  transform-style: preserve-3d;
 }
 
 .feature:hover {
   background: #141414;
-    text-decoration: none;
+  text-decoration: none;
+  scale: 1.1;
 }
 
 .feature h3 {
