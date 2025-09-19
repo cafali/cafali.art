@@ -76,6 +76,20 @@ section.hero::after {
   background: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0.2));
 }
 
+
+/* SECTION TITLE */
+h1 b {
+    font-size: 3.1em;
+    font-weight: 300;
+}
+
+/* Scale down on smaller screens */
+@media (max-width: 768px) {
+  h1 b {
+    font-size: 2em;
+  }
+}
+
 section.hero h2 {
   font-family: 'Pacifico', cursive;	
   font-size: 10em;
