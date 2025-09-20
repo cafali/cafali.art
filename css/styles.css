@@ -139,6 +139,13 @@ section.hero2 {
   position: relative;
 }
 
+/* Scale down */
+@media (max-width: 768px) {
+  section.hero2 {
+    font-size: 0.85em;
+  }
+}
+
 section.hero2::after {
   content: "";
   position: absolute; inset: 0;
