@@ -47,19 +47,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // adjust nav for mobile
 document.addEventListener("DOMContentLoaded", function() {
-  const navLinks = Array.from(document.querySelectorAll('a[href="#aboutme"], a[href="#projects"], a[href="#setup"], a[href="#contact"]'));
-  const separatorLink = Array.from(document.querySelectorAll('a')).find(a => a.textContent.trim() === "|");
+  const navLinks = Array.from(document.querySelectorAll(
+    'a[href="#aboutme"], a[href="#projects"], a[href="#setup"], a[href="#contact"]'
+  ));
+  const separatorLink = Array.from(document.querySelectorAll('a'))
+    .find(a => a.textContent.trim() === "|");
 
-  function toggleVisibility() {
-    const isMobile = window.innerWidth <= 768; // min for mobile
+  function hideForMobile() {
+    const isMobile = window.matchMedia("(max-width: 768px)").matches;
+
     const displayStyle = isMobile ? "none" : "inline-block";
-    navLinks.forEach(link => link.style.display = displayStyle);
-    if (separatorLink) separatorLink.style.display = displayStyle;
+    [...navLinks, separatorLink].forEach(el => {
+      if (el) el.style.display = displayStyle;
+    });
   }
-  toggleVisibility();
 
-  // Update when window is resized
-  window.addEventListener("resize", toggleVisibility);
+  hideForMobile();
+
+  window.addEventListener("resize", hideForMobile);
+  window.addEventListener("orientationchange", hideForMobile);
 });
 
 // gooogle analytics
