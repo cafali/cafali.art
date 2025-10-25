@@ -292,7 +292,7 @@ section.features h2 {
 
 /* CTA */
 section.cta {
-  padding: 20px 20px;
+  padding: 1px 20px;
   text-align: center;
   background: repeating-linear-gradient(
     270deg,
@@ -301,7 +301,7 @@ section.cta {
     #e84393 100%
   );
   background-size: 400% 400%;
-  animation: razerFlow 10s linear infinite;
+  animation: razerFlow 8s linear infinite;
 }
 
 @keyframes razerFlow {
@@ -330,7 +330,7 @@ footer {
   font-size: 0.9em;
   font-weight: 400;
   color: #aaa;
-  border-top: 3px solid #e84393;
+  border-top: 3px solid #e8439300;  /* opa 0% pink */
 }
 
 footer a {
