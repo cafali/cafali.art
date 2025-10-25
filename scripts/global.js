@@ -1,3 +1,5 @@
+
+// Color on scroll for nav links
 document.addEventListener('DOMContentLoaded', () => {
   const navLinks = Array.from(document.querySelectorAll('header nav a'))
                         .filter(a => a.getAttribute('href')?.startsWith('#'));
@@ -43,6 +45,22 @@ document.addEventListener('DOMContentLoaded', () => {
   highlightCurrentSection();
 });
 
+// adjust nav for mobile
+document.addEventListener("DOMContentLoaded", function() {
+  const navLinks = Array.from(document.querySelectorAll('a[href="#aboutme"], a[href="#projects"], a[href="#setup"], a[href="#contact"]'));
+  const separatorLink = Array.from(document.querySelectorAll('a')).find(a => a.textContent.trim() === "|");
+
+  function toggleVisibility() {
+    const isMobile = window.innerWidth <= 768; // min for mobile
+    const displayStyle = isMobile ? "none" : "inline-block";
+    navLinks.forEach(link => link.style.display = displayStyle);
+    if (separatorLink) separatorLink.style.display = displayStyle;
+  }
+  toggleVisibility();
+
+  // Update when window is resized
+  window.addEventListener("resize", toggleVisibility);
+});
 
 // gooogle analytics
   window.dataLayer = window.dataLayer || [];
