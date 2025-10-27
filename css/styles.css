@@ -245,7 +245,7 @@ section.features h2 {
   background: #1c1c1c1a;
   padding: 40px 40px;
   border-radius: 0px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.616);
+  box-shadow: 0 10px 30px rgb(0 0 0 / 72%);
   transition: transform 0.3s ease;
   text-decoration: none;
   opacity: 0;
@@ -256,9 +256,11 @@ section.features h2 {
 }
 
 .feature:hover {
-  background: linear-gradient(180deg, #20e0bd1f, #0f0f0f);
+  background: linear-gradient(180deg, #061916, #090909);
   text-decoration: none;
   scale: 1.3;
+  opacity: 1;
+  z-index: 2;
 }
 
 .feature h3 {
