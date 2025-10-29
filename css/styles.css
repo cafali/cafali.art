@@ -64,9 +64,7 @@ section.hero {
   height: 100vh;
   display: flex; flex-direction: column;
   justify-content: center; align-items: center;
-  background:
-    linear-gradient(to bottom right, #3300854e, #8000ff50),
-    url('../assets/background.webp');
+  background: url('../assets/background.webp') no-repeat center center/cover;
   text-align: center;
   padding: 0 20px;
   position: relative;
