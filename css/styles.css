@@ -184,7 +184,7 @@ section.hero2 p {
   transition: all 0.3s ease;
   margin: 5px;
   z-index: 1; position: relative;
-  box-shadow: 0 6px 20px rgba(232, 67, 147, 0.4);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.668);
 
   opacity: 0;
   transform: translateY(40px);
@@ -195,7 +195,7 @@ section.hero2 p {
 .btn:hover {
   transform: translateY(-3px);
   background: #be3979;
-  box-shadow: 0 8px 24px rgba(217, 32, 224, 0.5);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.668);
 }
 
 .btn-green {
