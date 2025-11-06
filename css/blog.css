@@ -41,11 +41,11 @@ html, body {
     height: 100%;
     background-color: var(--bg-color);
     background-image:
-    linear-gradient(to bottom right, #8100cb8f, #0915630f),
+    linear-gradient(to bottom right, #3600487b, #1930c30f),
     url('../assets/background.webp');
     filter: brightness(1);
     background-size: cover;
-    filter: brightness(0.6);
+    filter: brightness(1);
     background-position: center;
     background-repeat: no-repeat;
     opacity: 1;
@@ -113,7 +113,7 @@ header nav a.active {
     max-width: 900px; 
     border-radius: 0px;
     padding: 30px; 
-    background-color: #0f001547;
+    background-color: #ffffff00;
     backdrop-filter: blur(5px);
     text-shadow: none;
     word-wrap: break-word;
@@ -125,7 +125,7 @@ header nav a.active {
 .post:hover {
     background-color: #0000005f;
     transform: translateY(-5px) scale(1.02);
-    backdrop-filter: blur(15px);
+    backdrop-filter: blur(35px);
 }
 
 .post h2 {
@@ -182,12 +182,12 @@ header nav a.active {
     text-decoration: none;
     color: inherit;
     margin: 0 10px;
+    font-weight: 100;
 }
 
 .year-link.active {
     text-decoration: underline;
     color: rgba(255, 255, 255, 0.568);
     font-weight: bold;
+    font-weight: 200;
 }
-
-
