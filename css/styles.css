@@ -355,3 +355,31 @@ html { scroll-behavior: smooth; }
     transform: translateY(0);
   }
 }
+
+privacy {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 100px 20px 40px; /* top padding pushes text below header */
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+
+privacy p {
+  max-width: 800px;
+  line-height: 1.6;
+  font-size: clamp(0.9em, 1.2vw, 1.1em); 
+}
+
+privacy a {
+  color: #20e0bd;
+  text-decoration: none;
+  word-break: break-word; 
+}
+
+privacy a:hover {
+  text-decoration: underline;
+}
