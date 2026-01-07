@@ -172,7 +172,7 @@
         titleInterval = setInterval(function() {
           document.title = isOriginal ? originalTitle : newTitle;
           isOriginal = !isOriginal;
-        }, 500);
+        }, 1000);
         document.title = newTitle;
       } else {
         clearInterval(titleInterval);
@@ -180,4 +180,5 @@
       }
     });
   })();
+
 </script>
