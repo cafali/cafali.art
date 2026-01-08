@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="css/styles.css">
 
   <script src="scripts/global.js"></script>
+  <script src="scripts/index.js"></script> 
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-VLDRNTTKV9"></script>
 
   <meta property="og:title" content="cafali.art - Home">
@@ -159,26 +160,3 @@
   </footer>
 </body>
 </html>
-
-<script>
-  (function() {
-    const originalTitle = document.title;
-    const newTitle = "Heeey, come back!";
-    let titleInterval;
-    
-    document.addEventListener('visibilitychange', function() {
-      if (document.hidden) {
-        let isOriginal = false;
-        titleInterval = setInterval(function() {
-          document.title = isOriginal ? originalTitle : newTitle;
-          isOriginal = !isOriginal;
-        }, 1000);
-        document.title = newTitle;
-      } else {
-        clearInterval(titleInterval);
-        document.title = originalTitle;
-      }
-    });
-  })();
-
-</script>
