@@ -113,13 +113,13 @@ header nav a.active {
     max-width: 900px; 
     border-radius: 0px;
     padding: 30px; 
-    background-color: #ffffff00;
+    background-color: #00000052;
     backdrop-filter: blur(5px);
     text-shadow: none;
     word-wrap: break-word;
     font-size: clamp(14px, 2vw, 20px);
     transition: transform 0.3s ease, background-color 0.5s ease;
-    box-shadow: 0px 0px 10px 0 #0000004e;
+    box-shadow: 0px 0px 10px 0 #000000c9;
 }
 
 .post:hover {
