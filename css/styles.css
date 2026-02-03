@@ -31,6 +31,16 @@ header {
   z-index: 1000;
 }
 
+.under-title {
+  text-decoration: none;
+  color: rgb(171, 171, 171);
+}
+
+.under-title:hover {
+  text-decoration: none;
+  color: rgb(220, 220, 220);
+}
+
 header h1 a {
   font-size: 1.2em;
   font-weight: 200;
