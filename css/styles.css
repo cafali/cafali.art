@@ -23,7 +23,7 @@ body {
 header {
   position: fixed;
   top: 0; width: 100%;
-  background: rgba(28, 28, 28, 0);
+  background: rgb(0 0 0 / 7%);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(255,255,255,0.08);
   padding: 10px 40px;
@@ -38,7 +38,7 @@ header {
 
 .under-title:hover {
   text-decoration: none;
-  color: rgb(220, 220, 220);
+  color: #12cfa9;
 }
 
 header h1 a {
@@ -74,16 +74,18 @@ section.hero {
   height: 100vh;
   display: flex; flex-direction: column;
   justify-content: center; align-items: center;
-  background: url('../assets/background.webp') no-repeat center center/cover;
+  background: no-repeat center center/cover;
+  background-image: linear-gradient(to bottom right, #4a00e652, #8000ff54), url('../assets/background.webp');
   text-align: center;
   padding: 0 20px;
   position: relative;
 }
 
+
 section.hero::after {
   content: "";
   position: absolute; inset: 0;
-  background: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0.2));
+  background: linear-gradient(to top, rgb(135 93 220 / 69%), rgba(0,0,0,0.2));
 }
 
 
@@ -140,10 +142,8 @@ section.hero2 {
   height: 50vh;
   display: flex; flex-direction: column;
   justify-content: center; align-items: center;
-    background:no-repeat center center/cover;
-    background-image:
-    linear-gradient(to bottom right, #3300854e, #8000ff50),
-    url('../assets/background.webp');
+  background: no-repeat center 32% / cover;
+  background-image: linear-gradient(to bottom right, #5200ff69, #ac60f8ab), url('../assets/background.webp');
   text-align: center;
   padding: 0 20px;
   position: relative;
@@ -159,8 +159,10 @@ section.hero2 {
 section.hero2::after {
   content: "";
   position: absolute; inset: 0;
-  background: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0.2));
 }
+
+
+
 
 section.hero2 h2 {
   font-family: 'Pacifico', cursive;
@@ -372,7 +374,7 @@ privacy {
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 100px 20px 40px; /* top padding pushes text below header */
+  padding: 100px 20px 40px; 
   box-sizing: border-box;
   overflow-y: auto;
 }
