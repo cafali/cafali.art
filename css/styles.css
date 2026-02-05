@@ -396,12 +396,12 @@ privacy a:hover {
   text-decoration: underline;
 }
 
-contact-link {
+.contact-link {
   color: white;
   text-decoration: none;
   transition: opacity 0.2s ease;
 }
 
-contact-link:hover {
+.contact-link:hover {
   opacity: 0.6;
 }
