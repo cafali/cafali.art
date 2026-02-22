@@ -403,5 +403,6 @@ privacy a:hover {
 }
 
 .contact-link:hover {
-  opacity: 0.6;
+  color: #12cfa9;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.161);
 }
