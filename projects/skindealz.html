@@ -19,7 +19,14 @@
 
 <body>
 
-
+  <header>
+    <h1><a href="https://cafali.art">cafali.art</a> | SKINDEALZ</h1>
+        <nav>
+        <a href="mailto:cafalidev@gmail.com">Contact</a>
+        <a> | </a> 
+        <a href="https://cafali.art">Home</a>
+    </nav>
+  </header>
 
 <section class="hero">
 
@@ -139,21 +146,61 @@ padding:0;
 box-sizing:border-box;
 }
 
-body{
-font-family:Inter,system-ui;
-background:#050505;
-color:#eaeaea;
-line-height:1.6;
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background: #0e0e0e;
+  color: #f1f1f1;
+  line-height: 1.6;
 }
 
-header{
-position:fixed;
-top:0;
-width:100%;
-background:rgba(10,10,10,0.65);
-backdrop-filter:blur(14px);
-border-bottom:1px solid rgba(255,255,255,0.08);
-z-index:1000;
+/* HEADER */
+header {
+  position: fixed;
+  top: 0; width: 100%;
+  background: rgb(0 0 0 / 7%);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  padding: 10px 40px;
+  display: flex; justify-content: space-between; align-items: center;
+  z-index: 1000;
+}
+
+.under-title {
+  text-decoration: none;
+  color: rgb(171, 171, 171);
+}
+
+.under-title:hover {
+  text-decoration: none;
+  color: #12cfa9;
+}
+
+header h1 a {
+  font-size: 1.2em;
+  font-weight: 200;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+header h1 a:hover {
+  color: #12cfa9;
+}
+
+header nav a {
+  margin-left:font-weight: 400 20px;
+  text-decoration: none;
+  color: #ccc;
+  font-weight: 200;
+  transition: color 0.25s;
+}
+
+header nav a:hover {
+  color: #20e0bd;
+}
+
+header nav a.active {
+  color: #e84393;
+  font-weight: 600;
 }
 
 .nav-container{
