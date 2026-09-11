@@ -266,6 +266,11 @@ button {
     color: #e5e5e5;
 }
 
+button i {
+    margin-right: 7px;
+    font-size: 0.95em;
+}
+
 button:hover {
     background: #2b2b2b;
     border-color: #404040;

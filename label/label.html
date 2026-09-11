@@ -14,6 +14,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 <link rel="stylesheet" href="style.css">
 </head>
 
@@ -38,7 +39,7 @@
             </div>
 
             <div id="dropZone" class="dropzone">
-                <div class="dropzone-icon">QR CODE</div>
+                <div class="dropzone-icon" aria-hidden="true"><i class="fa-solid fa-qrcode"></i></div>
                 <div class="dropzone-title">Drop QR Image Here</div>
                 <div class="dropzone-hint">or click to browse local files</div>
             </div>
@@ -67,9 +68,9 @@
             </div>
 
             <div class="btn-row">
-                <button id="parseButton" class="primary">Reset Data</button>
-                <button id="copyRawButton">Copy String</button>
-                <button id="clearButton" class="danger">Clear Workspace</button>
+                <button id="parseButton" class="primary"><i class="fa-solid fa-rotate-right" aria-hidden="true"></i>Reset Data</button>
+                <button id="copyRawButton"><i class="fa-regular fa-copy" aria-hidden="true"></i>Copy String</button>
+                <button id="clearButton" class="danger"><i class="fa-solid fa-trash-can" aria-hidden="true"></i>Clear Workspace</button>
             </div>
 
             <div id="parseStatus" class="status-text"></div>
@@ -88,7 +89,7 @@
                     <div class="panel" style="background: #1313137d; padding: 16px;">
                         <div class="panel-header" style="margin-bottom: 8px;">
                             <span class="input-label" style="margin:0;">Sender address</span>
-                            <button class="btn-sm" onclick="copyField('sender')">Copy</button>
+                            <button class="btn-sm" onclick="copyField('sender')" title="Copy sender address"><i class="fa-regular fa-copy" aria-hidden="true"></i>Copy</button>
                         </div>
                         <textarea id="sender" style="min-height: 110px;"></textarea>
                     </div>
@@ -96,7 +97,7 @@
                     <div class="panel" style="background: #1313137d; padding: 16px;">
                         <div class="panel-header" style="margin-bottom: 8px;">
                             <span class="input-label" style="margin:0;">Amazon Address</span>
-                            <button class="btn-sm" onclick="copyField('receiver')">Copy</button>
+                            <button class="btn-sm" onclick="copyField('receiver')" title="Copy Amazon address"><i class="fa-regular fa-copy" aria-hidden="true"></i>Copy</button>
                         </div>
                         <textarea id="receiver" style="min-height: 110px;"></textarea>
                     </div>
@@ -113,7 +114,7 @@
                     <div class="panel" style="background: #1313137d; padding: 16px;">
                         <div class="panel-header" style="margin-bottom: 8px;">
                             <span class="input-label" style="margin:0;">Barcode TOP</span>
-                            <button class="btn-sm" onclick="copyField('code1')">Copy</button>
+                            <button class="btn-sm" onclick="copyField('code1')" title="Copy top barcode"><i class="fa-regular fa-copy" aria-hidden="true"></i>Copy</button>
                         </div>
                         <input type="text" id="code1">
                     </div>
@@ -121,7 +122,7 @@
                     <div class="panel" style="background: #1313137d; padding: 16px;">
                         <div class="panel-header" style="margin-bottom: 8px;">
                             <span class="input-label" style="margin:0;">Barcode BOTTOM</span>
-                            <button class="btn-sm" onclick="copyField('code2')">Copy</button>
+                            <button class="btn-sm" onclick="copyField('code2')" title="Copy bottom barcode"><i class="fa-regular fa-copy" aria-hidden="true"></i>Copy</button>
                         </div>
                         <input type="text" id="code2">
                     </div>
@@ -132,7 +133,7 @@
             <div class="panel">
                 <div class="panel-header">
                     <h2>RAW Data Preview</h2>
-                    <button class="btn-sm" id="copyFullButton">Copy</button>
+                    <button class="btn-sm" id="copyFullButton" title="Copy raw data"><i class="fa-regular fa-copy" aria-hidden="true"></i>Copy</button>
                 </div>
                 <div id="rawOutput" class="raw-box"></div>
             </div>
@@ -169,14 +170,14 @@
                 </div>
 
                 <div class="btn-row" style="margin-top: 20px;">
-                    <button id="downloadPngButton" class="action">Download Label (.png)</button>
+                    <button id="downloadPngButton" class="action"><i class="fa-solid fa-download" aria-hidden="true"></i>Download Label (.png)</button>
+                    <button id="printLabelButton"><i class="fa-solid fa-print" aria-hidden="true"></i>Print Label</button>
                 </div>
             </div>
 
         </div>
 
     </div>
-
 </div>
 </body>
 </html>
