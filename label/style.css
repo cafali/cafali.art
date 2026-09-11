@@ -482,3 +482,30 @@ button.danger:hover {
         gap: 12px;
     }
 }
+
+/* =========================================================
+   LABEL PREVIEW AREA
+   ========================================================= */
+
+.preview-canvas-container {
+    background-color: #ffffff;
+    background-image: 
+        conic-gradient(#e0e0e0 0.25turn, transparent 0.25turn 0.5turn, 
+                      #e0e0e0 0.5turn 0.75turn, transparent 0.75turn);
+    background-size: 20px 20px;
+    background-position: top left;
+
+    border-radius: var(--radius);
+
+    padding: 32px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    overflow-x: auto;
+
+    box-shadow:
+        inset 0 0 0 1px rgba(255, 255, 255, 0.919);
+}

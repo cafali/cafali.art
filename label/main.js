@@ -221,7 +221,7 @@
             const imageURL = canvas.toDataURL("image/png");
             const downloadLink = document.createElement("a");
             downloadLink.href = imageURL;
-            downloadLink.download = "shipping-return-label-100x180mm.png";
+            downloadLink.download = "shipping-return-label.png";
             document.body.appendChild(downloadLink);
             downloadLink.click();
             document.body.removeChild(downloadLink);
