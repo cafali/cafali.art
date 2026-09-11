@@ -55,7 +55,7 @@
         <!-- 2. Raw String Panel -->
         <div class="panel">
             <div class="panel-header">
-                <h2>Extracted QR Data</h2>
+                <h2>Upload Extracted QR String</h2>
             </div>
 
             <div class="input-group">
@@ -67,9 +67,9 @@
             </div>
 
             <div class="btn-row">
-                <button id="parseButton" class="primary">Reparse Data</button>
-                <button id="copyRawButton">Copy Stream</button>
-                <button id="clearButton" class="danger">Reset Workspace</button>
+                <button id="parseButton" class="primary">Reset Data</button>
+                <button id="copyRawButton">Copy String</button>
+                <button id="clearButton" class="danger">Clear Workspace</button>
             </div>
 
             <div id="parseStatus" class="status-text"></div>
@@ -81,13 +81,13 @@
             <!-- 3. Editable Addresses -->
             <div class="panel full-width">
                 <div class="panel-header">
-                    <h2>Address Fields (Click to Edit)</h2>
+                    <h2>Label Data (View &Edit)</h2>
                 </div>
 
                 <div class="dashboard-grid">
                     <div class="panel" style="background: #1313137d; padding: 16px;">
                         <div class="panel-header" style="margin-bottom: 8px;">
-                            <span class="input-label" style="margin:0;">Absender (Sender)</span>
+                            <span class="input-label" style="margin:0;">Sender address</span>
                             <button class="btn-sm" onclick="copyField('sender')">Copy</button>
                         </div>
                         <textarea id="sender" style="min-height: 110px;"></textarea>
@@ -95,7 +95,7 @@
 
                     <div class="panel" style="background: #1313137d; padding: 16px;">
                         <div class="panel-header" style="margin-bottom: 8px;">
-                            <span class="input-label" style="margin:0;">Empfänger (Receiver)</span>
+                            <span class="input-label" style="margin:0;">Amazon Address</span>
                             <button class="btn-sm" onclick="copyField('receiver')">Copy</button>
                         </div>
                         <textarea id="receiver" style="min-height: 110px;"></textarea>
@@ -106,13 +106,13 @@
             <!-- 4. Editable Tracking Codes -->
             <div class="panel full-width">
                 <div class="panel-header">
-                    <h2>Logistic Tracking & Barcode Codes (Click to Edit)</h2>
+                    <h2>Amazon Label Codes (View & Edit)</h2>
                 </div>
 
                 <div class="dashboard-grid">
                     <div class="panel" style="background: #1313137d; padding: 16px;">
                         <div class="panel-header" style="margin-bottom: 8px;">
-                            <span class="input-label" style="margin:0;">Barcode 1</span>
+                            <span class="input-label" style="margin:0;">Barcode TOP</span>
                             <button class="btn-sm" onclick="copyField('code1')">Copy</button>
                         </div>
                         <input type="text" id="code1">
@@ -120,7 +120,7 @@
 
                     <div class="panel" style="background: #1313137d; padding: 16px;">
                         <div class="panel-header" style="margin-bottom: 8px;">
-                            <span class="input-label" style="margin:0;">Barcode 2</span>
+                            <span class="input-label" style="margin:0;">Barcode BOTTOM</span>
                             <button class="btn-sm" onclick="copyField('code2')">Copy</button>
                         </div>
                         <input type="text" id="code2">
@@ -146,7 +146,7 @@
                 <div class="preview-canvas-container" id="labelCaptureArea">
                     <div class="retour-label">
                         <img id="labelQrCode" class="label-qr-code" alt="Scanned QR code">
-                        <h3>RETOURPAKET</h3>
+                        <h3>Retourpaket</h3>
 
                         <div class="label-section">
                             <div class="label-section-title">Absender:</div>
