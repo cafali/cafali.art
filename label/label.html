@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Logistics Data Parser & Label Generator</title>
-
+<title>Label Generator</title>
+<link rel="icon" href="../assets/icon.png">
 <!-- External Dependencies -->
 <script src="https://cdn.jsdelivr.net/npm/jsqr@1.4.0/dist/jsQR.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.12.3/dist/JsBarcode.all.min.js"></script>
@@ -23,10 +23,10 @@
 
     <header>
         <div class="app-title-group">
-            <h1>Create Label Tool by cafali.art</h1>
+            <h1>Generate your Amazon Return Label</h1>
             <p>A simple tool for creating return labels from QR data by cafali</p>
         </div>
-        <div class="badge">Amazon Return Label Generator</div>
+        <div class="badge">cafali.art</div>
     </header>
 
     <div class="dashboard-grid">
@@ -85,7 +85,7 @@
                 </div>
 
                 <div class="dashboard-grid">
-                    <div class="panel" style="background: rgba(11, 15, 23, 0.4); padding: 16px;">
+                    <div class="panel" style="background: #1313137d; padding: 16px;">
                         <div class="panel-header" style="margin-bottom: 8px;">
                             <span class="input-label" style="margin:0;">Absender (Sender)</span>
                             <button class="btn-sm" onclick="copyField('sender')">Copy</button>
@@ -93,7 +93,7 @@
                         <textarea id="sender" style="min-height: 110px;"></textarea>
                     </div>
 
-                    <div class="panel" style="background: rgba(11, 15, 23, 0.4); padding: 16px;">
+                    <div class="panel" style="background: #1313137d; padding: 16px;">
                         <div class="panel-header" style="margin-bottom: 8px;">
                             <span class="input-label" style="margin:0;">Empfänger (Receiver)</span>
                             <button class="btn-sm" onclick="copyField('receiver')">Copy</button>
@@ -110,7 +110,7 @@
                 </div>
 
                 <div class="dashboard-grid">
-                    <div class="panel" style="background: rgba(11, 15, 23, 0.4); padding: 16px;">
+                    <div class="panel" style="background: #1313137d; padding: 16px;">
                         <div class="panel-header" style="margin-bottom: 8px;">
                             <span class="input-label" style="margin:0;">Barcode 1</span>
                             <button class="btn-sm" onclick="copyField('code1')">Copy</button>
@@ -118,7 +118,7 @@
                         <input type="text" id="code1">
                     </div>
 
-                    <div class="panel" style="background: rgba(11, 15, 23, 0.4); padding: 16px;">
+                    <div class="panel" style="background: #1313137d; padding: 16px;">
                         <div class="panel-header" style="margin-bottom: 8px;">
                             <span class="input-label" style="margin:0;">Barcode 2</span>
                             <button class="btn-sm" onclick="copyField('code2')">Copy</button>
@@ -169,7 +169,7 @@
                 </div>
 
                 <div class="btn-row" style="margin-top: 20px;">
-                    <button id="downloadPngButton" class="action">Download (.png)</button>
+                    <button id="downloadPngButton" class="action">Download Label (.png)</button>
                 </div>
             </div>
 
