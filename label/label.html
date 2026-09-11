@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Logistics Data Parser & Label Generator</title>
+
+<!-- External Dependencies -->
+<script src="https://cdn.jsdelivr.net/npm/jsqr@1.4.0/dist/jsQR.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.12.3/dist/JsBarcode.all.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="main.js" defer></script>
+<!-- Inter Font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="app-container">
+
+    <header>
+        <div class="app-title-group">
+            <h1>Create Label Tool by cafali.art</h1>
+            <p>A simple tool for creating return labels from QR data by cafali</p>
+        </div>
+        <div class="badge">Amazon Return Label Generator</div>
+    </header>
+
+    <div class="dashboard-grid">
+
+        <!-- 1. QR Code Ingestion Panel -->
+        <div class="panel">
+            <div class="panel-header">
+                <h2>Upload your QR Code</h2>
+            </div>
+
+            <div id="dropZone" class="dropzone">
+                <div class="dropzone-icon">QR CODE</div>
+                <div class="dropzone-title">Drop QR Image Here</div>
+                <div class="dropzone-hint">or click to browse local files</div>
+            </div>
+
+            <input type="file" id="fileInput" accept="image/*">
+
+            <div id="previewContainer" class="preview-box">
+                <img id="qrPreview" alt="Scanned QR preview">
+            </div>
+
+            <div id="qrStatus" class="status-text"></div>
+        </div>
+
+        <!-- 2. Raw String Panel -->
+        <div class="panel">
+            <div class="panel-header">
+                <h2>Extracted QR Data</h2>
+            </div>
+
+            <div class="input-group">
+                <textarea 
+                    id="rawInput" 
+                    spellcheck="false" 
+                    placeholder="Decoded raw character string displays here..."
+                ></textarea>
+            </div>
+
+            <div class="btn-row">
+                <button id="parseButton" class="primary">Reparse Data</button>
+                <button id="copyRawButton">Copy Stream</button>
+                <button id="clearButton" class="danger">Reset Workspace</button>
+            </div>
+
+            <div id="parseStatus" class="status-text"></div>
+        </div>
+
+        <!-- Results Area (Hidden by default until parsed) -->
+        <div class="dashboard-grid full-width hidden" id="results">
+
+            <!-- 3. Editable Addresses -->
+            <div class="panel full-width">
+                <div class="panel-header">
+                    <h2>Address Fields (Click to Edit)</h2>
+                </div>
+
+                <div class="dashboard-grid">
+                    <div class="panel" style="background: rgba(11, 15, 23, 0.4); padding: 16px;">
+                        <div class="panel-header" style="margin-bottom: 8px;">
+                            <span class="input-label" style="margin:0;">Absender (Sender)</span>
+                            <button class="btn-sm" onclick="copyField('sender')">Copy</button>
+                        </div>
+                        <textarea id="sender" style="min-height: 110px;"></textarea>
+                    </div>
+
+                    <div class="panel" style="background: rgba(11, 15, 23, 0.4); padding: 16px;">
+                        <div class="panel-header" style="margin-bottom: 8px;">
+                            <span class="input-label" style="margin:0;">Empfänger (Receiver)</span>
+                            <button class="btn-sm" onclick="copyField('receiver')">Copy</button>
+                        </div>
+                        <textarea id="receiver" style="min-height: 110px;"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4. Editable Tracking Codes -->
+            <div class="panel full-width">
+                <div class="panel-header">
+                    <h2>Logistic Tracking & Barcode Codes (Click to Edit)</h2>
+                </div>
+
+                <div class="dashboard-grid">
+                    <div class="panel" style="background: rgba(11, 15, 23, 0.4); padding: 16px;">
+                        <div class="panel-header" style="margin-bottom: 8px;">
+                            <span class="input-label" style="margin:0;">Barcode 1</span>
+                            <button class="btn-sm" onclick="copyField('code1')">Copy</button>
+                        </div>
+                        <input type="text" id="code1">
+                    </div>
+
+                    <div class="panel" style="background: rgba(11, 15, 23, 0.4); padding: 16px;">
+                        <div class="panel-header" style="margin-bottom: 8px;">
+                            <span class="input-label" style="margin:0;">Barcode 2</span>
+                            <button class="btn-sm" onclick="copyField('code2')">Copy</button>
+                        </div>
+                        <input type="text" id="code2">
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5. Complete Raw Buffer Inspector -->
+            <div class="panel">
+                <div class="panel-header">
+                    <h2>RAW Data Preview</h2>
+                    <button class="btn-sm" id="copyFullButton">Copy</button>
+                </div>
+                <div id="rawOutput" class="raw-box"></div>
+            </div>
+
+            <!-- 6. Label Layout Preview & PNG Exporter -->
+            <div class="panel">
+                <div class="panel-header">
+                    <h2>Label Preview</h2>
+                </div>
+
+                <div class="preview-canvas-container" id="labelCaptureArea">
+                    <div class="retour-label">
+                        <img id="labelQrCode" class="label-qr-code" alt="Scanned QR code">
+                        <h3>RETOURPAKET</h3>
+
+                        <div class="label-section">
+                            <div class="label-section-title">Absender:</div>
+                            <div id="labelSender" class="label-address-text"></div>
+                        </div>
+
+                        <div class="label-section">
+                            <div class="label-section-title">Empfänger:</div>
+                            <div id="labelReceiver" class="label-address-text"></div>
+                        </div>
+
+                        <div class="barcode-wrapper">
+                            <svg id="barcode1Svg"></svg>
+                        </div>
+
+                        <div class="barcode-wrapper">
+                            <svg id="barcode2Svg"></svg>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="btn-row" style="margin-top: 20px;">
+                    <button id="downloadPngButton" class="action">Download (.png)</button>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+</body>
+</html>
