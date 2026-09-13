@@ -430,7 +430,7 @@ button.danger:hover {
 
 @media print {
     @page {
-        size: A4 portrait;
+        size: 125mm 180mm;
         margin: 0;
     }
 
@@ -439,31 +439,45 @@ button.danger:hover {
         padding: 0;
     }
 
-    body * {
-        visibility: hidden;
+    body > * {
+        display: none !important;
     }
 
-    #labelCaptureArea,
-    #labelCaptureArea * {
-        visibility: visible;
+    body.print-label > .app-container {
+        display: block !important;
+        width: 125mm;
+        margin: 0;
     }
 
-    #labelCaptureArea {
-        position: fixed;
-        inset: 0;
-        width: 100vw;
-        height: 100vh;
+    body.print-label .app-container > header,
+    body.print-label .app-container > .dashboard-grid > :not(#results),
+    body.print-label #results > :not(:has(#labelCaptureArea)) {
+        display: none !important;
+    }
+
+    body.print-label #results,
+    body.print-label .panel:has(#labelCaptureArea) {
+        display: contents !important;
+    }
+
+    body.print-label .panel:has(#labelCaptureArea) > :not(#labelCaptureArea) {
+        display: none !important;
+    }
+
+    body.print-label #labelCaptureArea {
+        display: flex !important;
+        width: 125mm;
+        height: 180mm;
         padding: 0;
         margin: 0;
         overflow: hidden;
-        display: flex;
-        justify-content: left;
-        align-items: left;
+        justify-content: flex-start;
+        align-items: flex-start;
         page-break-after: avoid;
         break-inside: avoid;
     }
 
-    #labelCaptureArea .retour-label {
+    body.print-label #labelCaptureArea .retour-label {
         width: 125mm;
         height: 180mm;
         min-width: 125mm;

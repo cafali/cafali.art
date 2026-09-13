@@ -228,4 +228,11 @@
         });
     });
 
-    printLabelButton.addEventListener("click", () => window.print());
+    printLabelButton.addEventListener("click", () => {
+        document.body.classList.add("print-label");
+        window.print();
+    });
+
+    window.addEventListener("afterprint", () => {
+        document.body.classList.remove("print-label");
+    });
